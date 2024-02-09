@@ -23,7 +23,7 @@ void Game::play() {
     if(playerGuess == randomNumber) {
         cout<<"Your guess is right = "<<playerGuess<<endl;
         numOfGuesses++;
-        cout<<"You guessed the right answer = "<<playerGuess<<" with "<<numOfGuesses<<" guesses"<<endl;
+        printGameResult();
     } else if(playerGuess < randomNumber) {
         cout<<"Your guess is too small"<<endl;
         numOfGuesses++;
@@ -34,4 +34,7 @@ void Game::play() {
     }
     while(playerGuess != randomNumber);
 
+}
+void Game::printGameResult() {
+    cout<<"You guessed the right answer = "<<playerGuess<<" with "<<numOfGuesses<<" guesses"<<endl;
 }
